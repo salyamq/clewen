@@ -1,0 +1,18 @@
+Clewen
+
+Combines Qwen/Qwen3.5-9B with Cloudflare/clef-flash (Clewen-Flash), or
+Qwen/Qwen3.8-27B with Cloudflare/clef (Clewen), using recovered switchable
+changes and the official Clef joint schema head.
+No new training has been performed. The recovered changes are an approximation,
+not the original LoRA factors. Clewen is not an official Qwen/Cloudflare release.
+
+Qwen model weights/configuration/tokenizer/processor: Qwen authors.
+See LICENSE-QWEN and the pinned upstream repository in config.json.
+Clef head, joint_schema_model.py and learned backbone changes: Cloudflare authors.
+See LICENSE-CLEF and the pinned upstream repository in config.json.
+joint_schema_model.py is copied without changes from Cloudflare and is
+identical in both pinned source releases.
+
+Added here: recovery packaging, adapter runtime, mode-switching loader,
+validation, inference examples, documentation and checks.
+See config.json in the complete release for pinned source revisions.

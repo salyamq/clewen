@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clewen"
+version = "0.3.0"
+description = "One Qwen backbone with text generation and Clef decisions"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "assets/LICENSE-CLEF", "assets/LICENSE-QWEN"]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch==2.10.0",
+    "torchvision==0.25.0",
+    "transformers==5.10.2",
+    "huggingface-hub>=1.5,<2",
+    "accelerate>=1.12,<2",
+    "safetensors>=0.6,<1",
+    "pillow>=11,<13",
+    "numpy>=2,<3",
+]
+
+[project.optional-dependencies]
+server = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1"]
+client = ["openai>=2,<3", "httpx>=0.28,<1"]
+dev = ["modal==1.6.1", "httpx>=0.28,<1", "build>=1,<2", "ruff>=0.11,<1"]
+cuda = [
+    "flash-linear-attention[cuda]==0.5.2; sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "causal-conv1d @ https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.7.0/causal_conv1d-1.7.0%2Bcu12torch2.10cxx11abiTRUE-cp311-cp311-linux_x86_64.whl#sha256=b872d04d98c80856fd897660eac7129cc2ab51db9694530ce0cd24e1b57200fe ; python_version == '3.11' and sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "causal-conv1d @ https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.7.0/causal_conv1d-1.7.0%2Bcu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=8e81f8c76435ad31aa41edc6c0c9d26de971a293b190183d2816da71547614d7 ; python_version == '3.12' and sys_platform == 'linux' and platform_machine == 'x86_64'",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+clewen-serve = "clewen.server:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+exclude = ["src/clewen/joint_schema_model.py"]

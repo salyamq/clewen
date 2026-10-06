@@ -1,0 +1,22 @@
+{
+  "clewen-flash": {
+    "name": "Clewen-Flash",
+    "repo_id": "ai-slab/clewen-flash",
+    "release_id": "clewen-flash-v6",
+    "adapter_id": "clef-recovered-r256-v1",
+    "sources": {
+      "clef": {"repo_id": "Cloudflare/clef-flash", "revision": "17f0b0ad64efb65d273590632833508766b2aae6"},
+      "qwen": {"repo_id": "Qwen/Qwen3.5-9B", "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"}
+    }
+  },
+  "clewen": {
+    "name": "Clewen",
+    "repo_id": "ai-slab/clewen",
+    "release_id": "clewen-v1",
+    "adapter_id": "clef-27b-recovered-r256-v1",
+    "sources": {
+      "clef": {"repo_id": "Cloudflare/clef", "revision": "2f3de3dd85f379784083b0814d997ab627200f0c"},
+      "qwen": {"repo_id": "Qwen/Qwen3.8-27B", "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"}
+    }
+  }
+}

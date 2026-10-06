@@ -1,0 +1,5 @@
+include LICENSE NOTICE
+recursive-include assets *
+recursive-include tools *.py *.json *.txt
+recursive-include examples *.py *.json
+recursive-include tests *.py *.json

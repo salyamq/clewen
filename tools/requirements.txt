@@ -1,0 +1,2 @@
+modal==1.6.1
+huggingface-hub>=1.5,<2

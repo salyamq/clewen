@@ -1,0 +1,9 @@
+# python 3.11 or 3.12. install on the linux gpu machine, not the 8 gb mac
+torch==2.10.0
+torchvision==0.25.0
+transformers==5.10.2
+huggingface-hub>=1.5,<2
+accelerate>=1.12,<2
+safetensors>=0.6,<1
+pillow>=11,<13
+numpy>=2,<3

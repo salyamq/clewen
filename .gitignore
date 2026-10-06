@@ -1,0 +1,17 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+.demo-session.json
+.demo-secret.json
+artifacts/releases/
+*.egg-info/
+build/
+dist/
+.local/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+*.safetensors
+*.bin
+.env
