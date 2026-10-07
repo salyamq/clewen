@@ -19,7 +19,7 @@ from PIL import Image
 from transformers import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
-    "ai-slab/clewen-flash",  # or "ai-slab/clewen"
+    "salyamq/clewen-flash",  # or "salyamq/clewen"
     trust_remote_code=True,
     device_map="cuda",
     dtype="bfloat16",
