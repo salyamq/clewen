@@ -1,9 +1,9 @@
 """hugging Face configuration for a two-mode Clewen inference release"""
 
-from transformers import PreTrainedConfig
+from transformers import PretrainedConfig
 
 
-class ClewenConfig(PreTrainedConfig):
+class ClewenConfig(PretrainedConfig):
     model_type = "clewen"
 
     def __init__(self, default_max_input_tokens=4096, source_models=None, modes=None, format_version=2, **kwargs):
