@@ -1,1 +1,3 @@
 *.safetensors filter=lfs diff=lfs merge=lfs -text
+qwen/tokenizer.json filter=lfs diff=lfs merge=lfs -text
+tokenizer.json filter=lfs diff=lfs merge=lfs -text
